@@ -17,11 +17,11 @@
               <div class="card-header">Sign Up</div>
               <div class="card-body">
                 <div class="form-group">
-                  <label class="col-form-label">Email</label>
+                  <label>Email</label>
                   <input type="email" class="form-control" placeholder="email@example.com" #userEmail required>
                 </div>
                 <div class="form-group">
-                  <label class="col-form-label">Password</label>
+                  <label>Password</label>
                   <input type="password" class="form-control" placeholder="Password" #userPwd required>
                 </div>
                 <div class="form-group text-center">
@@ -35,15 +35,15 @@
             <div class="card-header">Sign In</div>
             <div class="card-body">
               <div class="form-group">
-                <label class="col-form-label">Email</label>
-                <input type="text" class="form-control" placeholder="Username" #userName required>
+                <label>Username or email</label>
+                <input type="text" class="form-control" placeholder="email@example.com" #userName required>
               </div>
               <div class="form-group">
-                <label class="col-form-label">Password</label>
+                <div class="row">
+                  <label class="col">Password</label>
+                  <a routerLink="/forgot-password" class="col">Forgot Password?</a>
+                </div>
                 <input type="password" class="form-control" placeholder="Password" #userPassword required>
-              </div>
-              <div class="form-group text-right">
-                <a routerLink="/forgot-password">Forgot Password?</a>
               </div>
               <div class="form-group text-center">
                 <input type="button" class="btn btn-success btn" value="Sign In" (click)="authService.SignIn(userName.value, userPassword.value)">
