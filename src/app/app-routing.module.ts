@@ -7,12 +7,14 @@ import {AuthGuard} from './core/guard/auth.guard';
 import {ForgotPasswordComponent} from './components/forgot-password/forgot-password.component';
 import {DashboardComponent} from './components/dashboard/dashboard.component';
 import {AdminGuard} from './core/guard/admin.guard';
+import {SearchComponent} from './components/search/search.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/guest', pathMatch: 'full'},
   {path: 'guest', component: GuestComponent, canActivate: [InnerGuard]},
   {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
+  {path: 'search', component: SearchComponent, canActivate: [AuthGuard]},
   {path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [InnerGuard]},
   {path: 'dashboard', component: DashboardComponent, canActivate: [AdminGuard]}
 ];

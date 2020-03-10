@@ -3,11 +3,11 @@ import {AuthService} from '../../core/service/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.sass']
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.sass']
 })
-export class UserComponent implements OnInit {
+export class NavigationComponent implements OnInit {
 
   constructor(
     public authService: AuthService,
