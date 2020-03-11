@@ -13,6 +13,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchComponent } from './components/search/search.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { ImageCardComponent } from './components/image-card/image-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     DashboardComponent,
     SearchComponent,
     ForgotPasswordComponent,
-    NavigationComponent
+    NavigationComponent,
+    ImageCardComponent
   ],
   imports: [
     BrowserModule,

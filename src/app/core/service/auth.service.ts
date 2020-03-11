@@ -78,6 +78,11 @@ export class AuthService {
     return this.IsLoggedIn && admin != null;
   }
 
+  get UserUid(): string {
+    const user = JSON.parse(localStorage.getItem('user'));
+    return user.uid;
+  }
+
   GoogleAuth() {
     return this.AuthLogin(new firebase.auth.GoogleAuthProvider());
   }
