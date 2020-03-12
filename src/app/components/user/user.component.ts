@@ -1,8 +1,7 @@
-import {Component, NgZone, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../core/service/auth.service';
 import {Router} from '@angular/router';
 import {ApiService} from '../../core/service/api.service';
-import {environment} from '../../../environments/environment';
 import {Subscription} from 'rxjs';
 import {Image} from '../../core/model/image';
 
@@ -13,14 +12,12 @@ import {Image} from '../../core/model/image';
 })
 export class UserComponent implements OnInit {
 
-  imagesSub: Subscription;
   images: Image[];
 
   constructor(
     public authService: AuthService,
     public apiService: ApiService,
-    public router: Router,
-    public ngZone: NgZone
+    public router: Router
   ) { }
 
   ngOnInit(): void {

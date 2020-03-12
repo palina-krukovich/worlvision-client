@@ -38,18 +38,9 @@
         crossorigin="anonymous"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    const options = {
-      success: formSubmitted,
-      beforeSubmit:  formBeforeSubmit,
-    };
-
-    $('#upload-form').ajaxForm(options);
-
-    $('#upload').change(function () {
+    $('#file-input').change(function () {
       readUrl(this);
     });
-
-    $('#upload-spinner').hide();
   });
 
   function readUrl(input) {
@@ -57,21 +48,13 @@
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        $('#image-result')
+        $('#result-image')
           .attr('src', e.target.result);
       };
       reader.readAsDataURL(input.files[0]);
     }
   }
 
-  function formBeforeSubmit(formData, jqForm, options) {
-    $('#image-result').attr('src', "");
-    $('#upload-spinner').show();
-  }
-
-  function formSubmitted(responseText, statusText, xhr, $form) {
-    $('#upload-spinner').hide();
-  }
 </script>
 
 </body>

@@ -14,6 +14,10 @@ import { SearchComponent } from './components/search/search.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { ImageCardComponent } from './components/image-card/image-card.component';
+import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AddImageFormComponent } from './components/add-image-form/add-image-form.component';
+import { FileUploadComponent } from './components/file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -24,16 +28,21 @@ import { ImageCardComponent } from './components/image-card/image-card.component
     SearchComponent,
     ForgotPasswordComponent,
     NavigationComponent,
-    ImageCardComponent
+    ImageCardComponent,
+    ImageGalleryComponent,
+    AddImageFormComponent,
+    FileUploadComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    AngularFireAuthModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+        AngularFireAuthModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

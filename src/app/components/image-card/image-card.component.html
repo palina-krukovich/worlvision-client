@@ -1,12 +1,13 @@
-<div class="card">
-  <img src="{{image.url}}" alt="" class="card-img-top" width="200" height="200">
-  <div class="card-body text-center">
-    <div class="row justify-content-around">
-            <span class="badge badge-pill badge-danger p-2">
-              <i class="fas fa-heart"></i> {{image.likesCount}}
-            </span>
-      <span class="badge badge-pill badge-warning p-2">
-              <i class="fas fa-download"></i> {{image.downloadsCount}}
-            </span>
-    </div>  </div>
+<div class="container-fluid mb-3">
+  <img src="{{image.url}}" alt="" class="rounded mw-100">
+  <div class="container-fluid p-2">
+    <a class="btn btn-outline-info btn-sm" href="{{image.url}}" (click)="downloadImage()">
+      <i class="fas fa-download"></i>
+      {{image.downloadsCount}}
+    </a>
+    <button *ngIf="authService.UserUid === image.userId" class="btn btn-outline-secondary btn-sm ml-3" (click)="deleteImage()">
+      <i class="fas fa-trash"></i>
+    </button>
+  </div>
 </div>
+

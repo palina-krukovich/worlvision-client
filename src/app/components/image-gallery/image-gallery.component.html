@@ -1,0 +1,26 @@
+<div class="d-flex flex-row mt-3">
+  <div class="d-flex flex-column w-25">
+    <div *ngFor="let image of images; index as i">
+      <app-image-card *ngIf="i <= images.length / 4"
+                      [image]="image" (delete)="deleteImage(image.url)"></app-image-card>
+    </div>
+  </div>
+  <div class="d-flex flex-column w-25">
+    <div *ngFor="let image of images; index as i">
+      <app-image-card *ngIf="i > images.length / 4 && i <= images.length / 2"
+                      [image]="image" (delete)="deleteImage(image.url)"></app-image-card>
+    </div>
+  </div>
+  <div class="d-flex flex-column w-25">
+    <div *ngFor="let image of images; index as i">
+      <app-image-card *ngIf="i > images.length / 2 && i <= images.length / 4 * 3"
+                      [image]="image" (delete)="deleteImage(image.url)"></app-image-card>
+    </div>
+  </div>
+  <div class="d-flex flex-column w-25">
+    <div *ngFor="let image of images; index as i">
+      <app-image-card *ngIf="i > images.length / 4 * 3"
+                      [image]="image" (delete)="deleteImage(image.url)"></app-image-card>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,42 @@
-<p>search works!</p>
+<app-navigation></app-navigation>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 m-3">
+      <div class="row mb-5">
+        <input type="search" placeholder="Enter tag" class="border-info border-top-0 form-control-plaintext pl-2" [(ngModel)]="tags">
+      </div>
+      <div class="row mb-5">
+        <div class="d-flex flex-wrap flex-row justify-content-between">
+          <div *ngFor="let color of colors; index as i" class="w-25 p-1">
+            <button class="btn btn-sm w-100"
+                    style="background-color: rgb({{color.red}}, {{color.green}}, {{color.blue}});"
+                    (click)="selectColor(i)">
+              <i *ngIf="!color.isSelected" class="fas fa-check" style="text-shadow: none; color: rgb({{color.red}}, {{color.green}}, {{color.blue}});"></i>
+              <i *ngIf="color.isSelected" class="fas fa-check"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <select class="form-control bg-dark border-info border-top-0 border-left-0 border-right-0 rounded-0 text-secondary p-0"
+                (change)="selectTime($event)">
+          <option *ngFor="let time of times; index as i">
+            {{time.value}}
+          </option>
+        </select>
+      </div>
+      <div class="row">
+        <button *ngIf="!isLoading" class="btn btn-outline-info form-control rounded-pill" (click)="search()">Search</button>
+        <div *ngIf="isLoading" class="d-flex justify-content-center pr-5 pl-5 pt-3 text-info">
+          <div class="spinner-border" role="status" id="upload-spinner">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div *ngIf="noImages" class="text-secondary text-center">Sorry... No images found.</div>
+      <app-image-gallery [images]="images"></app-image-gallery>
+    </div>
+  </div>
+</div>
