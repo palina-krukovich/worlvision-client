@@ -1,0 +1,58 @@
+{
+  "GUEST": {
+    "QUOTE": "World Vision - это возможность для фотографов и креативных людей делиться потрясающими снимками.",
+    "NAME": "Полина Крукович",
+    "SIGN_UP": "Создать аккаунт",
+    "SIGN_IN": "Войти",
+    "EMAIL": "Адрес эл. почты",
+    "PASSWORD": "Пароль",
+    "USERNAME_OR_EMAIL": "Имя пользователя или пароль",
+    "OR_SIGN_IN_WITH": "Или войдите с помощью:"
+  },
+  "ADD_IMAGE_FORM" : {
+    "CANCEL": "Отмена",
+    "LOAD_PICTURE": "Загрузить картинку"
+  },
+  "DASHBOARD": {
+    "MANAGE_USERS": "Управление пользователями",
+    "CREATE_NEW_USER_WITH_EMAIL_AND_PASSWORD": "Создать нового пользователя",
+    "EMAIL": "Эл. почта",
+    "PASSWORD": "Пароль",
+    "CANCEL": "Отмена",
+    "CREATE_USER": "Создать пользователя",
+    "DISPLAY_NAME": "Имя",
+    "PROVIDERS": "Провайдеры",
+    "CREATED": "Создан",
+    "LAST_SIGNED_IN": "Был онлайн",
+    "DOWNLOADS": "Скачивания",
+    "TODAY": "За сегодня",
+    "LAST_WEEK": "За неделю",
+    "LAST_MONTH": "За месяц",
+    "LAST_YEAR": "За год"
+  },
+  "FILE_UPLOAD": {
+    "SELECT_PICTURE": "Выбрать картинку"
+  },
+  "IMAGE_CARD": {
+    "TAGS": "Теги"
+  },
+  "NAVIGATION": {
+    "PROFILE": "Профиль",
+    "SEARCH": "Поиск",
+    "DASHBOARD": "Админ панель",
+    "SIGN_OUT": "Выйти"
+  },
+  "SEARCH": {
+    "ENTER_TAGS": "Введите теги",
+    "SEARCH": "Поиск",
+    "NO_IMAGES": "Картинок не найдено.",
+    "ANY_TIME": "За все время",
+    "TODAY": "За сегодня",
+    "LAST_WEEK": "За неделю",
+    "LAST_MONTH": "За месяц",
+    "LAST_YEAR": "За год"
+  },
+  "USER": {
+    "ADD_PICTURE": "Добавить картинку"
+  }
+}

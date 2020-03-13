@@ -1,0 +1,58 @@
+{
+  "GUEST": {
+    "QUOTE": "World Vision is an opportunity for photographers and creative people to share amazing pictures.",
+    "NAME": "Polina Krukovich",
+    "SIGN_UP": "Sign Up",
+    "SIGN_IN": "Sign In",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "USERNAME_OR_EMAIL": "Username or Email",
+    "OR_SIGN_IN_WITH": "Or Sign In with:"
+  },
+  "ADD_IMAGE_FORM": {
+    "CANCEL": "Cancel",
+    "LOAD_PICTURE": "Load picture"
+  },
+  "DASHBOARD": {
+    "MANAGE_USERS": "Manage users",
+    "CREATE_NEW_USER_WITH_EMAIL_AND_PASSWORD": "Create new user with Email & Password",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CANCEL": "Cancel",
+    "CREATE_USER": "Create user",
+    "DISPLAY_NAME": "Display name",
+    "PROVIDERS": "Providers",
+    "CREATED": "Created",
+    "LAST_SIGNED_IN": "Last Signed In",
+    "DOWNLOADS": "Downloads",
+    "TODAY": "Today",
+    "LAST_WEEK": "Last week",
+    "LAST_MONTH": "Last month",
+    "LAST_YEAR": "Last year"
+  },
+  "FILE_UPLOAD": {
+    "SELECT_PICTURE": "Select picture"
+  },
+  "IMAGE_CARD": {
+    "TAGS": "Tags"
+  },
+  "NAVIGATION": {
+    "PROFILE": "Profile",
+    "SEARCH": "Search",
+    "DASHBOARD": "Admin Dashboard",
+    "SIGN_OUT": "Sign Out"
+  },
+  "SEARCH": {
+    "ENTER_TAGS": "Enter tags",
+    "SEARCH": "Search",
+    "NO_IMAGES": "Sorry... No images found.",
+    "ANY_TIME": "Any time",
+    "TODAY": "Past 24 hours",
+    "LAST_WEEK": "Past week",
+    "LAST_MONTH": "Past month",
+    "LAST_YEAR": "Past year"
+  },
+  "USER": {
+    "ADD_PICTURE": "Add picture"
+  }
+}

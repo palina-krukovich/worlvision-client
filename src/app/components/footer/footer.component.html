@@ -1,0 +1,7 @@
+<footer class="footer fixed-bottom">
+  <div class="container-fluid p-3">
+      <select class="bg-dark custom-select text-secondary" style="max-width: 100px;" #langSelect (change)="translate.use(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+  </div>
+</footer>

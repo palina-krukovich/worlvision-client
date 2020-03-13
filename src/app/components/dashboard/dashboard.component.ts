@@ -3,11 +3,11 @@ import {ApiService} from '../../core/service/api.service';
 import {ExportedUser} from '../../core/model/exported-user';
 import * as firebase from 'firebase';
 import {AuthService} from '../../core/service/auth.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.sass']
+  templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
 
@@ -28,7 +28,8 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     public apiService: ApiService,
-    public authService: AuthService
+    public authService: AuthService,
+    public translate: TranslateService
   ) { }
 
   ngOnInit(): void {

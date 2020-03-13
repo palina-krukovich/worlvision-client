@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-2 m-3">
       <div class="row mb-5">
-        <input type="search" placeholder="Enter tag" class="border-info border-top-0 form-control-plaintext pl-2" [(ngModel)]="tags">
+        <input type="search" placeholder="{{ 'SEARCH.ENTER_TAGS' | translate}}" class="border-info border-top-0 form-control-plaintext pl-2" [(ngModel)]="tags">
       </div>
       <div class="row mb-5">
         <div class="d-flex flex-wrap flex-row justify-content-between">
@@ -26,7 +26,9 @@
         </select>
       </div>
       <div class="row">
-        <button *ngIf="!isLoading" class="btn btn-outline-info form-control rounded-pill" (click)="search()">Search</button>
+        <button *ngIf="!isLoading" class="btn btn-outline-info form-control rounded-pill" (click)="search()">
+          {{ 'SEARCH.SEARCH' | translate }}
+        </button>
         <div *ngIf="isLoading" class="d-flex justify-content-center pr-5 pl-5 pt-3 text-info">
           <div class="spinner-border" role="status" id="upload-spinner">
             <span class="sr-only">Loading...</span>
@@ -35,7 +37,7 @@
       </div>
     </div>
     <div class="col">
-      <div *ngIf="noImages" class="text-secondary text-center">Sorry... No images found.</div>
+      <div *ngIf="noImages" class="text-secondary text-center">{{ 'SEARCH.NO_IMAGES' | translate }}</div>
       <app-image-gallery [images]="images"></app-image-gallery>
     </div>
   </div>

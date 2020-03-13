@@ -2,8 +2,8 @@
   <input type="hidden" formControlName="userId">
   <app-file-upload formControlName="image"></app-file-upload>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-    <button *ngIf="!isLoading" class="btn btn-outline-info">Load picture</button>
+    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">{{ 'ADD_IMAGE_FORM.CANCEL' | translate }}</button>
+    <button *ngIf="!isLoading" class="btn btn-outline-info">{{ 'ADD_IMAGE_FORM.LOAD_PICTURE' | translate }}</button>
     <div *ngIf="isLoading" class="d-flex justify-content-center text-info">
       <div class="spinner-border spinner-border" role="status" id="upload-spinner">
         <span class="sr-only">Loading...</span>

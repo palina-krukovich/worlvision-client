@@ -3,11 +3,11 @@ import {AuthService} from '../../core/service/auth.service';
 import {ApiService} from '../../core/service/api.service';
 import {Router} from '@angular/router';
 import {Image} from '../../core/model/image';
+import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.sass']
+  templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit {
 
@@ -43,7 +43,26 @@ export class SearchComponent implements OnInit {
     public authService: AuthService,
     public apiService: ApiService,
     public router: Router,
-  ) { }
+    public translate: TranslateService
+  ) {
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.translate.get('SEARCH.ANY_TIME').subscribe((text: string) => {
+        this.times[0].value = text;
+      });
+      this.translate.get('SEARCH.TODAY').subscribe((text: string) => {
+        this.times[1].value = text;
+      });
+      this.translate.get('SEARCH.LAST_WEEK').subscribe((text: string) => {
+        this.times[2].value = text;
+      });
+      this.translate.get('SEARCH.LAST_MONTH').subscribe((text: string) => {
+        this.times[3].value = text;
+      });
+      this.translate.get('SEARCH.LAST_YEAR').subscribe((text: string) => {
+        this.times[4].value = text;
+      });
+    });
+  }
 
   ngOnInit(): void {
     this._getTopImages();

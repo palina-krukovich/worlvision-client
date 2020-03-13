@@ -1,0 +1,58 @@
+{
+  "GUEST": {
+    "QUOTE": "World Vision ist eine Gelegenheit für Fotografen und Kreative, tolle Bilder zu teilen.",
+    "NAME": "Polina Krukovich",
+    "SIGN_UP": "Anmelden",
+    "SIGN_IN": "Einloggen",
+    "EMAIL": "Email",
+    "PASSWORD": "Passwort",
+    "USERNAME_OR_EMAIL": "Benutzername oder E-Mail-Adresse",
+    "OR_SIGN_IN_WITH": "Oder Melden Sie sich an mit:"
+  },
+  "ADD_IMAGE_FORM": {
+    "CANCEL": "Stornieren",
+    "LOAD_PICTURE": "Bild laden"
+  },
+  "DASHBOARD": {
+    "MANAGE_USERS": "Benutzer verwalten",
+    "CREATE_NEW_USER_WITH_EMAIL_AND_PASSWORD": "Erstellen Sie einen neuen Benutzer mit E-Mail und Passwort",
+    "EMAIL": "Email",
+    "PASSWORD": "Passwort",
+    "CANCEL": "Stornieren",
+    "CREATE_USER": "Benutzer erstellen",
+    "DISPLAY_NAME": "Anzeigename",
+    "PROVIDERS": "Anbieter",
+    "CREATED": "Erstellt",
+    "LAST_SIGNED_IN": "Zuletzt angemeldet",
+    "DOWNLOADS": "Downloads",
+    "TODAY": "Heute",
+    "LAST_WEEK": "Letzte Woche",
+    "LAST_MONTH": "Letzten Monat",
+    "LAST_YEAR": "Letztes Jahr"
+  },
+  "FILE_UPLOAD": {
+    "SELECT_PICTURE": "Bild auswählen"
+  },
+  "IMAGE_CARD": {
+    "TAGS": "Tags"
+  },
+  "NAVIGATION": {
+    "PROFILE": "Profil",
+    "SEARCH": "Suche",
+    "DASHBOARD": "Admin-Dashboard",
+    "SIGN_OUT": "Abmelden"
+  },
+  "SEARCH": {
+    "ENTER_TAGS": "Tags eingeben",
+    "SEARCH": "Suche",
+    "NO_IMAGES": "Entschuldigung ... Keine Bilder gefunden.",
+    "ANY_TIME": "Jederzeit",
+    "TODAY": "Letzte 24 Stunden",
+    "LAST_WEEK": "Letzte Woche",
+    "LAST_MONTH": "Letzten Monat",
+    "LAST_YEAR": "Letztes Jahr"
+  },
+  "USER": {
+    "ADD_PICTURE": "Añadir foto"
+  }
+}

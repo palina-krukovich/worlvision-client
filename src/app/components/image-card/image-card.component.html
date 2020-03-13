@@ -11,7 +11,7 @@
       </button>
       <div class="btn-group" role="group">
         <button id="btnGroupDrop1" type="button" class="btn btn-outline-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tags
+          {{ 'IMAGE_CARD.TAGS' | translate }}
         </button>
         <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="max-width: 400px; width: fit-content">
           <div *ngFor="let tag of image.tags.split(',')" class="dropdown-item">{{tag}}</div>

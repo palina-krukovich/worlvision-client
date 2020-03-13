@@ -1,10 +1,10 @@
 import {ChangeDetectorRef, Component, ElementRef, HostListener, Input, OnInit} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-file-upload',
   templateUrl: './file-upload.component.html',
-  styleUrls: ['./file-upload.component.sass'],
 
   providers: [
     {
@@ -26,7 +26,8 @@ export class FileUploadComponent implements ControlValueAccessor {
   }
 
   constructor(
-    private host: ElementRef<HTMLInputElement>
+    private host: ElementRef<HTMLInputElement>,
+    public translate: TranslateService
   ) { }
 
   writeValue( value: null ) {

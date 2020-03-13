@@ -3,8 +3,7 @@ import {Image} from '../../core/model/image';
 
 @Component({
   selector: 'app-image-gallery',
-  templateUrl: './image-gallery.component.html',
-  styleUrls: ['./image-gallery.component.sass']
+  templateUrl: './image-gallery.component.html'
 })
 export class ImageGalleryComponent implements OnInit {
 

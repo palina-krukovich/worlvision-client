@@ -4,7 +4,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GuestComponent } from './components/guest/guest.component';
@@ -15,9 +15,16 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { ImageCardComponent } from './components/image-card/image-card.component';
 import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddImageFormComponent } from './components/add-image-form/add-image-form.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { FooterComponent } from './components/footer/footer.component';
+
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 
 @NgModule({
   declarations: [
@@ -31,7 +38,8 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     ImageCardComponent,
     ImageGalleryComponent,
     AddImageFormComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    FooterComponent
   ],
     imports: [
         BrowserModule,
@@ -41,7 +49,14 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
         AngularFireAuthModule,
         HttpClientModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+          }
+        })
     ],
   providers: [],
   bootstrap: [AppComponent]

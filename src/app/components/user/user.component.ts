@@ -4,11 +4,11 @@ import {Router} from '@angular/router';
 import {ApiService} from '../../core/service/api.service';
 import {Subscription} from 'rxjs';
 import {Image} from '../../core/model/image';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.sass']
+  templateUrl: './user.component.html'
 })
 export class UserComponent implements OnInit {
 
@@ -17,7 +17,8 @@ export class UserComponent implements OnInit {
   constructor(
     public authService: AuthService,
     public apiService: ApiService,
-    public router: Router
+    public router: Router,
+    public translate: TranslateService
   ) { }
 
   ngOnInit(): void {

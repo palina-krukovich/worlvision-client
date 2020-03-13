@@ -8,13 +8,13 @@
     </a>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/user">Profile</a>
+        <a class="nav-link" routerLink="/user">{{ 'NAVIGATION.PROFILE' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/search">Search</a>
+        <a class="nav-link" routerLink="/search">{{ 'NAVIGATION.SEARCH' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a *ngIf="authService.IsAdmin" class="nav-link" routerLink="/dashboard">Dashboard</a>
+        <a *ngIf="authService.IsAdmin" class="nav-link" routerLink="/dashboard">{{ 'NAVIGATION.DASHBOARD' | translate }}</a>
       </li>
     </ul>
   </div>
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="card-body text-center">
-          <button class="btn btn-outline-secondary btn-block" (click)="authService.SignOut()">Sign Out</button>
+          <button class="btn btn-outline-secondary btn-block" (click)="authService.SignOut()">{{ 'NAVIGATION.SIGN_OUT' | translate }}</button>
         </div>
       </div>
     </div>

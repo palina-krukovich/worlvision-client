@@ -4,11 +4,11 @@ import {requiredFileType} from '../../core/tools/requiredFileType';
 import {ApiService} from '../../core/service/api.service';
 import {toFormData} from '../../core/tools/toFormData';
 import {AuthService} from '../../core/service/auth.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-add-image-form',
-  templateUrl: './add-image-form.component.html',
-  styleUrls: ['./add-image-form.component.sass']
+  templateUrl: './add-image-form.component.html'
 })
 export class AddImageFormComponent implements OnInit {
 
@@ -22,7 +22,8 @@ export class AddImageFormComponent implements OnInit {
     private fb: FormBuilder,
     private cd: ChangeDetectorRef,
     private apiService: ApiService,
-    private authService: AuthService
+    private authService: AuthService,
+    public translate: TranslateService
   ) { }
 
   ngOnInit(): void {
