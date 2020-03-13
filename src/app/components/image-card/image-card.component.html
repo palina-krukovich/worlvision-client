@@ -1,13 +1,23 @@
 <div class="container-fluid mb-3">
   <img src="{{image.url}}" alt="" class="rounded mw-100">
   <div class="container-fluid p-2">
-    <a class="btn btn-outline-info btn-sm" href="{{image.url}}" (click)="downloadImage()">
-      <i class="fas fa-download"></i>
-      {{image.downloadsCount}}
-    </a>
-    <button *ngIf="authService.UserUid === image.userId" class="btn btn-outline-secondary btn-sm ml-3" (click)="deleteImage()">
-      <i class="fas fa-trash"></i>
-    </button>
+    <div class="btn-group" role="group">
+      <a class="btn btn-outline-info btn-sm" href="{{image.url}}" (click)="downloadImage()">
+        <i class="fas fa-download"></i>
+        {{image.downloadsCount}}
+      </a>
+      <button *ngIf="authService.UserUid === image.userId" class="btn btn-outline-warning btn-sm pr-3 pl-3" (click)="deleteImage()">
+        <i class="fas fa-trash"></i>
+      </button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-outline-success dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tags
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" style="max-width: 400px; width: fit-content">
+          <div *ngFor="let tag of image.tags.split(',')" class="dropdown-item">{{tag}}</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
-

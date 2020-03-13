@@ -13,7 +13,7 @@ import {AuthService} from '../../core/service/auth.service';
 export class AddImageFormComponent implements OnInit {
 
   formGroup = new FormGroup({
-    uid: new FormControl(this.authService.UserUid),
+    userId: new FormControl(this.authService.UserUid),
     image: new FormControl(null, [Validators.required, requiredFileType()])
   });
   isLoading = false;

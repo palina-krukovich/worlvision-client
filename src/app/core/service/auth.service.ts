@@ -54,8 +54,6 @@ export class AuthService {
           this.router.navigate(['user']);
         });
         this.SetUserData(result.user);
-      }).catch((error) => {
-        window.alert(error.message);
       });
   }
 
@@ -74,13 +72,16 @@ export class AuthService {
   }
 
   get IsAdmin(): boolean {
-    const admin = localStorage.getItem('admin');
-    return this.IsLoggedIn && admin != null;
+    return this.UserUid === 'gMBatbp2umXkhmglrqlJYt4ng792';
   }
 
   get UserUid(): string {
     const user = JSON.parse(localStorage.getItem('user'));
     return user.uid;
+  }
+
+  getIdToken() {
+    return firebase.auth().currentUser.getIdToken(true);
   }
 
   GoogleAuth() {
@@ -120,6 +121,7 @@ export class AuthService {
       photoURL: user.photoURL,
       emailVerified: user.emailVerified
     };
+
     return userRef.set(userData, {
       merge: true
     });

@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
   {path: 'search', component: SearchComponent, canActivate: [AuthGuard]},
   {path: 'forgot-password', component: ForgotPasswordComponent, canActivate: [InnerGuard]},
-  {path: 'dashboard', component: DashboardComponent, canActivate: [AdminGuard]}
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard, AdminGuard]}
 ];
 
 @NgModule({

@@ -5,4 +5,5 @@ export interface Image {
   userId: string;
   downloadsCount: number;
   creationTime: string;
+  tags: string;
 }
